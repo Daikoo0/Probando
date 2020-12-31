@@ -581,8 +581,8 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
        
-        Moverse();
-        RecargarMatriz();
+        Funcion();
+        
     }//GEN-LAST:event_jButton4MouseClicked
 
     /**
@@ -1175,40 +1175,11 @@ public class Ventana extends javax.swing.JFrame {
 
     
     public void Funcion(){
-        //boolean si = true; 
-        int cont = 0;
-        boolean x = true;
         
-        while(x = true){
-            cont++;
-            System.out.println("Mueve la matriz");
+        for(int gg = 0; gg < Actualizacion; gg++){
+            
             Moverse();
-            this.repaint();
-            System.out.println("Termina de mover la matriz");
-            
-            x = false;
-            
-            System.out.println("Termina el programa");
-            
-            if(cont == Actualizacion){
-                
-                System.out.println("Actualizo la matriz");
-                RecargarMatriz();
-                this.repaint();
-                cont = 0;
-                System.out.println("Termino de Actualizar");
-                
-            }
-
-            try {
-
-             Thread.sleep(2000);
-
-            } catch (InterruptedException e) {
-
-            }
-            
-            
+            RecargarMatriz();
             
         }
                 
