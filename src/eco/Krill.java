@@ -10,11 +10,34 @@ public class Krill extends Peces {
         Especie = 1;
         AlimentacionMin = 9999;
         AlimentacionMax = 9999;
-        Reproduccion = 4;
+        Reproduccion = 8;
         EsperanzaVida = 25;
         HambreAct = 0;
         VidaAct = 0;
+        ReproduccionAct = 0;
+    }
+    
+    @Override
+    public void Restablecer(){
         
+        this.HambreAct = 0;
+        this.VidaAct = 0;
+        this.ReproduccionAct = 0;
+    }
+    
+    @Override
+    public int GetReproduccionAct(){
+        return ReproduccionAct;
+    }
+    
+    @Override
+    public int GetReproduccion(){
+        return Reproduccion;
+    }
+    
+    @Override
+    public void DarRepro(){
+        this.ReproduccionAct++;
     }
     
     @Override

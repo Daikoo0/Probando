@@ -8,13 +8,37 @@ public class Salmon extends Peces{
         InicialN = "S";
         Depredar = 2;
         Especie = 2;
-        AlimentacionMin = 3;
-        AlimentacionMax = 10;
-        Reproduccion = 5;
+        AlimentacionMin = 9;
+        AlimentacionMax = 18;
+        Reproduccion = 15;
         EsperanzaVida = 30;
         HambreAct = 0;
         VidaAct = 0;
+        ReproduccionAct = 0;
         
+    }
+    
+    @Override
+    public void Restablecer(){
+        
+        this.HambreAct = 0;
+        this.VidaAct = 0;
+        this.ReproduccionAct = 0;
+    }
+    
+    @Override
+    public int GetReproduccionAct(){
+        return ReproduccionAct;
+    }
+    
+    @Override
+    public int GetReproduccion(){
+        return Reproduccion;
+    }
+    
+    @Override
+    public void DarRepro(){
+        this.ReproduccionAct++;
     }
     
     @Override

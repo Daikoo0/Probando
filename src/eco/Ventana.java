@@ -762,6 +762,7 @@ public class Ventana extends javax.swing.JFrame {
                 
                 String dou = peces[x][y].GetNombre();
                 
+                
                 if(khacer > 0 && khacer < 45){
                     //MOVERSE EN EL EJE X
               
@@ -798,10 +799,11 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(animal2 == 0){
                                 
+                                peces[x][y].DarRepro();
                                 peces[x][y].DarHambre();
                                 peces[x][y].VidaA();
                                 
-                                System.out.println(dou +" Se movio a la derecha");
+                                System.out.println(dou +" Se movio para abajo");
                                 
                                 temp = peces[x][y+1];
                                 peces[x][y+1] = peces[x][y];
@@ -841,9 +843,10 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(animal1 == 0){
                                 
+                                peces[x][y].DarRepro();
                                 peces[x][y].DarHambre();
                                 peces[x][y].VidaA();
-                                System.out.println(dou+" Se movio a la izquierda");
+                                System.out.println(dou+" Se movio para arriba");
                                 temp = peces[x][y-1];
                                 peces[x][y-1] = peces[x][y];
                                 peces[x][y] = temp;
@@ -859,6 +862,28 @@ public class Ventana extends javax.swing.JFrame {
                         int xd = modnar.nextInt(2);
                         
                         if(animalAct == 1 || animalAct == 2 || animalAct == 3 || animalAct == 4 || animalAct == 5 || animalAct == 6){
+                            
+                            if(peces[x][y].GetReproduccionAct() >= peces[x][y].GetReproduccion() &&  peces[x][y].GetDepredar() == peces[x][y-1].GetDepredar() || peces[x][y].GetDepredar() == peces[x][y+1].GetDepredar() ){
+                                
+                              
+                                
+                                if(peces[x][y-1].GetDepredar() == 0){
+                                    
+                                    peces[x][y-1] = peces[x][y];
+                                    peces[x][y-1].Restablecer();
+                                    
+                                }
+                                    
+                                
+                                if(peces[x][y+1].GetDepredar() == 0){
+                                    
+                                    peces[x][y+1] = peces[x][y];
+                                    peces[x][y+1].Restablecer();
+                                            
+                                }
+                                
+                                
+                            }
                             
                             if(peces[x][y].GetVidaAct() >= peces[x][y].GetEsperanzaVida()){
                             
@@ -886,9 +911,10 @@ public class Ventana extends javax.swing.JFrame {
                                 
                                 if(animal2 == 0){
                                     
+                                    peces[x][y].DarRepro();
                                     peces[x][y].DarHambre();
                                     peces[x][y].VidaA();
-                                    System.out.println(dou+" Se movio a la derecha");
+                                    System.out.println(dou+" Se movio para abajo");
                                     temp = peces[x][y+1];
                                     peces[x][y+1] = peces[x][y];
                                     peces[x][y] = temp;
@@ -907,9 +933,10 @@ public class Ventana extends javax.swing.JFrame {
                                 
                                 if(animal1 == 0){
                                     
+                                    peces[x][y].DarRepro();
                                     peces[x][y].DarHambre();
                                     peces[x][y].VidaA();
-                                    System.out.println(dou+" Se movio a la izquierda");
+                                    System.out.println(dou+" Se movio para arriba");
                                     temp = peces[x][y-1];
                                     peces[x][y-1] = peces[x][y];
                                     peces[x][y] = temp; 
@@ -953,9 +980,10 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(animal2 == 0){
                                 
+                                peces[x][y].DarRepro();
                                 peces[x][y].DarHambre();
                                 peces[x][y].VidaA();
-                                System.out.println(dou+" Se movio para abajo");
+                                System.out.println(dou+" Se movio para la derecha");
                                 temp = peces[x+1][y];
                                 peces[x+1][y] = peces[x][y];
                                 peces[x][y] = temp;
@@ -995,9 +1023,10 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(animal1 == 0){
                                 
+                                peces[x][y].DarRepro();
                                 peces[x][y].DarHambre();
                                 peces[x][y].VidaA();
-                                System.out.println(dou+" Se ha movido para arriba");
+                                System.out.println(dou+" Se ha movido para izquierda");
                                 temp = peces[x-1][y];
                                 peces[x-1][y] = peces[x][y];
                                 peces[x][y] = temp;
@@ -1013,6 +1042,28 @@ public class Ventana extends javax.swing.JFrame {
                         int xd = modnar.nextInt(2);
                         
                         if(animalAct == 1 || animalAct == 2 || animalAct == 3 || animalAct == 4 || animalAct == 5 || animalAct == 6){
+                            
+                            if(peces[x][y].GetReproduccionAct() >= peces[x][y].GetReproduccion() &&  peces[x][y].GetDepredar() == peces[x-1][y].GetDepredar() || peces[x][y].GetDepredar() == peces[x+1][y].GetDepredar() ){
+                                
+                              
+                                
+                                if(peces[x-1][y].GetDepredar() == 0){
+                                    
+                                    peces[x-1][y] = peces[x][y];
+                                    peces[x-1][y].Restablecer();
+                                    
+                                }
+                                    
+                                
+                                if(peces[x+1][y].GetDepredar() == 0){
+                                    
+                                    peces[x+1][y] = peces[x][y];
+                                    peces[x+1][y].Restablecer();
+                                            
+                                }
+                                
+                                
+                            }
                             
                             if(peces[x][y].GetVidaAct() >= peces[x][y].GetEsperanzaVida()){
                             
@@ -1041,9 +1092,10 @@ public class Ventana extends javax.swing.JFrame {
                                 
                                 if(animal2 == 0){
                                     
+                                    peces[x][y].DarRepro();
                                     peces[x][y].DarHambre();
                                     peces[x][y].VidaA();
-                                    System.out.println(dou+" Se ha movido para abajo");
+                                    System.out.println(dou+" Se ha movido para la derecha");
                                     temp = peces[x+1][y];
                                     peces[x+1][y] = peces[x][y];
                                     peces[x][y] = temp;
@@ -1062,9 +1114,10 @@ public class Ventana extends javax.swing.JFrame {
                                 
                                 if(animal1 == 0){
                                     
+                                    peces[x][y].DarRepro();
                                     peces[x][y].DarHambre();
                                     peces[x][y].VidaA();
-                                    System.out.println(dou+" Se ha movido para arriba");
+                                    System.out.println(dou+" Se ha movido para la izquierda");
                                     temp = peces[x-1][y];
                                     peces[x-1][y] = peces[x][y];
                                     peces[x][y] = temp;
@@ -1088,9 +1141,10 @@ public class Ventana extends javax.swing.JFrame {
                     }
                 }  
                 
-                
+                peces[x][y].DarHambre();
                 
             }
+         
         }
         
         System.out.println("////////////////////////////////////");

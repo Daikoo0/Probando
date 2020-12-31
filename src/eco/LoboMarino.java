@@ -8,13 +8,37 @@ public class LoboMarino extends Peces {
         InicialN = "L";
         Depredar = 4;
         Especie = 4;
-        AlimentacionMin = 5;
-        AlimentacionMax = 12;
-        Reproduccion = 8;
+        AlimentacionMin = 9;
+        AlimentacionMax = 16;
+        Reproduccion = 17;
         EsperanzaVida = 35;
         HambreAct = 0;
         VidaAct = 0;
+        ReproduccionAct = 0;
         
+    }
+    
+    @Override
+    public void Restablecer(){
+        
+        this.HambreAct = 0;
+        this.VidaAct = 0;
+        this.ReproduccionAct = 0;
+    }
+    
+    @Override
+    public int GetReproduccionAct(){
+        return ReproduccionAct;
+    }
+    
+    @Override
+    public int GetReproduccion(){
+        return Reproduccion;
+    }
+    
+    @Override
+    public void DarRepro(){
+        this.ReproduccionAct++;
     }
     
     @Override

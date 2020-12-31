@@ -12,7 +12,7 @@ public abstract class Peces {
     protected int EsperanzaVida;
     protected int HambreAct;
     protected int VidaAct;
-    
+    protected int ReproduccionAct;
     // Funciones //
     
     public abstract void Mover();
@@ -22,6 +22,8 @@ public abstract class Peces {
     public abstract void DarHambre();
     public abstract void RestHambre();
     public abstract void VidaA();
+    public abstract void DarRepro();
+    public abstract void Restablecer();
     
     public abstract String GetNombre();
     public abstract int GetDepredar();
@@ -30,5 +32,6 @@ public abstract class Peces {
     public abstract int GetAlimentacionMax();
     public abstract int GetEsperanzaVida();
     public abstract int GetHambreAct();
-       
+    public abstract int GetReproduccion();
+    public abstract int GetReproduccionAct();
 }
