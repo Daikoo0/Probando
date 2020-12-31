@@ -7,7 +7,7 @@ package eco;
 import java.util.Random;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
+import javax.swing.JTextArea;
 /**
  *
  * @author yoyit
@@ -273,49 +273,51 @@ public class Ventana extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(ImgOrca, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ImgTiburon, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ImgLoboMarino, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ImgPulpo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ImgSalmon, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ImgKrill)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Piedrita)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Awita)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 482, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Tiburoncito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Pulpito, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(Krillcito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dimension1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(xd)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(LoboMarinito, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Orquita)
-                    .addComponent(Salmoncito, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(9, 9, 9))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(59, 59, 59))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton4)
+                        .addGap(152, 152, 152))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(ImgOrca, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ImgTiburon, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ImgLoboMarino, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ImgPulpo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ImgSalmon, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ImgKrill)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Piedrita)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Awita)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 482, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Tiburoncito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Pulpito, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Krillcito, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dimension1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(xd)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LoboMarinito, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Orquita)
+                            .addComponent(Salmoncito, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(9, 9, 9))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -670,22 +672,7 @@ public class Ventana extends javax.swing.JFrame {
                 
                 etiquetas[i][j].setVisible(true);
             }
-        }
-        
-        for (int i = 0; i < anchoTablero; i++) {
-            for (int j = 0; j < altoTablero; j++) {
-                
-                int animalxd;
-                
-                animalxd = peces[i][j].GetDepredar();
-                System.out.println(animalxd); 
-                
-                if(animalxd == 5){
-                    System.out.println("Tiburon de Pana"); 
-                }
-            }
-        }
-        
+        } 
         
         this.repaint();
             
@@ -772,7 +759,8 @@ public class Ventana extends javax.swing.JFrame {
                 
                 
                 int animalAct = peces[x][y].GetDepredar();
-                 
+                
+                String dou = peces[x][y].GetNombre();
                 
                 if(khacer > 0 && khacer < 45){
                     //MOVERSE EN EL EJE X
@@ -786,7 +774,8 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(peces[x][y].GetVidaAct() >= peces[x][y].GetEsperanzaVida()){
                             
-                                System.out.println(peces[x][y].GetNombre()+" Murio de Viejo");
+                                
+                                System.out.println(dou + " Se le ha agotado la vida");
                                 peces[x][y] = new Awa();
 
                             }
@@ -795,7 +784,7 @@ public class Ventana extends javax.swing.JFrame {
                             if(peces[x][y].GetAlimentacionMax() <= peces[x][y].GetHambreAct()  ){
                     
                                 //Se Muere un Pescao
-                                System.out.println(peces[x][y].GetNombre()+" Se murio de Hambre");
+                                System.out.println(dou+" Se murio de Hambre");
                                 peces[x][y] = new Awa();
 
                             }
@@ -811,7 +800,9 @@ public class Ventana extends javax.swing.JFrame {
                                 
                                 peces[x][y].DarHambre();
                                 peces[x][y].VidaA();
-                                System.out.println(peces[x][y].GetNombre()+" IZQUIERDA Se movio X");
+                                
+                                System.out.println(dou +" Se movio a la derecha");
+                                
                                 temp = peces[x][y+1];
                                 peces[x][y+1] = peces[x][y];
                                 peces[x][y] = temp;
@@ -827,7 +818,7 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(peces[x][y].GetVidaAct() >= peces[x][y].GetEsperanzaVida()){
                             
-                                System.out.println(peces[x][y].GetNombre()+" Murio de Viejo");
+                                System.out.println(dou + " Se le ha agotado la vida");
                                 peces[x][y] = new Awa();
 
                             }
@@ -836,7 +827,7 @@ public class Ventana extends javax.swing.JFrame {
                             if(peces[x][y].GetAlimentacionMax() <= peces[x][y].GetHambreAct()  ){
                     
                                 //Se Muere un Pescao
-                                System.out.println(peces[x][y].GetNombre()+" Se murio de Hambre");
+                                System.out.println(dou+" Se murio de Hambre");
                                 peces[x][y] = new Awa();
 
                             }
@@ -852,7 +843,7 @@ public class Ventana extends javax.swing.JFrame {
                                 
                                 peces[x][y].DarHambre();
                                 peces[x][y].VidaA();
-                                System.out.println(peces[x][y].GetNombre()+" DERECHA Se movio X");
+                                System.out.println(dou+" Se movio a la izquierda");
                                 temp = peces[x][y-1];
                                 peces[x][y-1] = peces[x][y];
                                 peces[x][y] = temp;
@@ -871,7 +862,7 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(peces[x][y].GetVidaAct() >= peces[x][y].GetEsperanzaVida()){
                             
-                                System.out.println(peces[x][y].GetNombre()+" Murio de Viejo");
+                                System.out.println(dou+" Se le ha agotado la vida");
                                 peces[x][y] = new Awa();
 
                             }
@@ -880,7 +871,7 @@ public class Ventana extends javax.swing.JFrame {
                             if(peces[x][y].GetAlimentacionMax() <= peces[x][y].GetHambreAct()  ){
                     
                                 //Se Muere un Pescao
-                                System.out.println(peces[x][y].GetNombre()+" Se murio de Hambre");
+                                System.out.println(dou+" Se murio de Hambre");
                                 peces[x][y] = new Awa();
 
                             }
@@ -897,7 +888,7 @@ public class Ventana extends javax.swing.JFrame {
                                     
                                     peces[x][y].DarHambre();
                                     peces[x][y].VidaA();
-                                    System.out.println(peces[x][y].GetNombre()+" AMBOS LADOS LIBRES Se movio X");
+                                    System.out.println(dou+" Se movio a la derecha");
                                     temp = peces[x][y+1];
                                     peces[x][y+1] = peces[x][y];
                                     peces[x][y] = temp;
@@ -918,7 +909,7 @@ public class Ventana extends javax.swing.JFrame {
                                     
                                     peces[x][y].DarHambre();
                                     peces[x][y].VidaA();
-                                    System.out.println(peces[x][y].GetNombre()+" AMBOS LADOS LIBRES Se movio X");
+                                    System.out.println(dou+" Se movio a la izquierda");
                                     temp = peces[x][y-1];
                                     peces[x][y-1] = peces[x][y];
                                     peces[x][y] = temp; 
@@ -939,7 +930,7 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(peces[x][y].GetVidaAct() >= peces[x][y].GetEsperanzaVida()){
                             
-                                System.out.println(peces[x][y].GetNombre()+" Murio de Viejo");
+                                System.out.println(dou+" Se le ha agotado la vida");
                                 peces[x][y] = new Awa();
 
                             }
@@ -948,7 +939,7 @@ public class Ventana extends javax.swing.JFrame {
                             if(peces[x][y].GetAlimentacionMax() <= peces[x][y].GetHambreAct()  ){
                     
                                 //Se Muere un Pescao
-                                System.out.println(peces[x][y].GetNombre()+" Se murio de Hambre");
+                                System.out.println(dou+" Se murio de Hambre");
                                 peces[x][y] = new Awa();
 
                             }
@@ -964,7 +955,7 @@ public class Ventana extends javax.swing.JFrame {
                                 
                                 peces[x][y].DarHambre();
                                 peces[x][y].VidaA();
-                                System.out.println(peces[x][y].GetNombre()+" ARRIBA Se movio Y");
+                                System.out.println(dou+" Se movio para abajo");
                                 temp = peces[x+1][y];
                                 peces[x+1][y] = peces[x][y];
                                 peces[x][y] = temp;
@@ -981,7 +972,7 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(peces[x][y].GetVidaAct() >= peces[x][y].GetEsperanzaVida()){
                             
-                                System.out.println(peces[x][y].GetNombre()+" Murio de Viejo");
+                                System.out.println(dou+" Se le a agotado la vida");
                                 peces[x][y] = new Awa();
 
                             }
@@ -990,7 +981,7 @@ public class Ventana extends javax.swing.JFrame {
                             if(peces[x][y].GetAlimentacionMax() <= peces[x][y].GetHambreAct()  ){
                     
                                 //Se Muere un Pescao
-                                System.out.println(peces[x][y].GetNombre()+" Se murio de Hambre");
+                                System.out.println(dou+" Se murio de Hambre");
                                 peces[x][y] = new Awa();
 
                             }
@@ -1006,7 +997,7 @@ public class Ventana extends javax.swing.JFrame {
                                 
                                 peces[x][y].DarHambre();
                                 peces[x][y].VidaA();
-                                System.out.println(peces[x][y].GetNombre()+" ABAJO Se movio Y");
+                                System.out.println(dou+" Se ha movido para arriba");
                                 temp = peces[x-1][y];
                                 peces[x-1][y] = peces[x][y];
                                 peces[x][y] = temp;
@@ -1025,7 +1016,7 @@ public class Ventana extends javax.swing.JFrame {
                             
                             if(peces[x][y].GetVidaAct() >= peces[x][y].GetEsperanzaVida()){
                             
-                                System.out.println(peces[x][y].GetNombre()+" Murio de Viejo");
+                                System.out.println(dou+" Se le ha agotado la vida");
                                 peces[x][y] = new Awa();
 
                             }
@@ -1034,7 +1025,7 @@ public class Ventana extends javax.swing.JFrame {
                             if(peces[x][y].GetAlimentacionMax() <= peces[x][y].GetHambreAct()  ){
                     
                                 //Se Muere un Pescao
-                                System.out.println(peces[x][y].GetNombre()+" Se murio de Hambre");
+                                System.out.println(dou+" Se murio de Hambre");
                                 peces[x][y] = new Awa();
 
                             }
@@ -1052,7 +1043,7 @@ public class Ventana extends javax.swing.JFrame {
                                     
                                     peces[x][y].DarHambre();
                                     peces[x][y].VidaA();
-                                    System.out.println(peces[x][y].GetNombre()+" AMOBOS LADOS LIBRES Se movio Y");
+                                    System.out.println(dou+" Se ha movido para abajo");
                                     temp = peces[x+1][y];
                                     peces[x+1][y] = peces[x][y];
                                     peces[x][y] = temp;
@@ -1073,7 +1064,7 @@ public class Ventana extends javax.swing.JFrame {
                                     
                                     peces[x][y].DarHambre();
                                     peces[x][y].VidaA();
-                                    System.out.println(peces[x][y].GetNombre()+" AMBOS LADOS LIBRES Se movio X");
+                                    System.out.println(dou+" Se ha movido para arriba");
                                     temp = peces[x-1][y];
                                     peces[x-1][y] = peces[x][y];
                                     peces[x][y] = temp;
@@ -1095,8 +1086,6 @@ public class Ventana extends javax.swing.JFrame {
                         peces[x][y] = new Awa();
 
                     }
-                    
-                    System.out.println(peces[x][y].GetNombre()+" NO SE MOVIO ALTA PAJA");
                 }  
                 
                 

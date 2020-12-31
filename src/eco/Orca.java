@@ -1,7 +1,5 @@
 package eco;
 
-import java.util.Random;
-
 public class Orca extends Peces {
     
     public Orca(){
